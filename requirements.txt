@@ -1,0 +1,98 @@
+# MCP-EDA – Python dependency list
+
+# This file contains all dependencies for the MCP-EDA platform:
+#   1) "Core Runtime"    – essential packages for microservices & AI agent
+#   2) "MCP Integration" – Model Context Protocol support  
+#   3) "Experiment"      – CodeBLEU evaluation framework
+#   4) "Development"     – optional tooling for development/testing
+#
+# Versions use compatible release constraints (~=) and range constraints
+# to ensure reproducible installs while allowing safe micro-upgrades.
+# Tested with Python 3.9+ (recommended: Python 3.11+)
+
+
+# 1) Core Runtime Stack   
+# Web framework and ASGI server
+fastapi>=0.110,<1.0            # web framework for agent & microservices
+uvicorn[standard]>=0.27,<1.0   # ASGI server with performance extras
+pydantic>=2.6,<3.0             # data validation and serialization
+
+# HTTP clients and networking
+requests>=2.31,<3.0            # HTTP client for service communication
+aiohttp>=3.9,<4.0              # async HTTP client for experiments
+
+# Configuration and environment
+python-dotenv>=1.0,<2.0        # .env file loader for configuration
+
+# AI and LLM integration
+openai>=1.14,<2.0              # OpenAI GPT-4 API client for intelligent agent
+
+# 2) MCP Integration      
+# Model Context Protocol support
+mcp>=1.0.0                     # MCP client/server SDK for Claude Desktop integration
+
+
+# 3) Data & Analysis      #
+
+# Scientific computing (experiment framework)
+pandas>=2.2,<3.0               # data manipulation for experiment results
+numpy>=1.26,<2.0               # numerical computing for metrics calculation
+
+# CodeBLEU evaluation framework
+codebleu>=0.5.0,<1.0.0         # code similarity evaluation metrics
+tree-sitter>=0.22.0,<0.24.0    # syntax tree parsing for code analysis
+
+# NLP and evaluation tools
+nltk>=3.8,<4.0                 # natural language processing toolkit
+evaluate>=0.4.0                # HuggingFace evaluation library
+
+# 4) Development Tools    
+# Code quality and formatting
+black>=24.3,<25.0              # code formatter
+flake8>=7.0,<8.0               # linting and style checking
+isort>=5.12,<6.0               # import sorting
+
+# Testing framework
+pytest>=8.0,<9.0               # unit testing framework
+pytest-asyncio>=0.23,<1.0      # async testing support
+pytest-cov>=4.0,<5.0           # test coverage reporting
+
+# Documentation
+mkdocs>=1.5,<2.0               # documentation site generator
+mkdocs-material>=9.5,<10.0     # material theme for mkdocs
+
+# Performance and monitoring (optional)
+psutil>=5.9,<6.0               # system monitoring utilities
+prometheus-client>=0.19,<1.0   # metrics collection (optional)
+
+# 5) Optional Extras      
+# Uncomment if using specific features:
+
+# For advanced experiment analysis:
+# matplotlib>=3.7,<4.0         # plotting and visualization
+# seaborn>=0.12,<1.0           # statistical visualization  
+# jupyter>=1.0,<2.0            # notebook environment
+
+# For enhanced logging:
+# structlog>=23.1,<24.0        # structured logging
+# colorlog>=6.7,<7.0           # colored console logs
+
+# For database storage (if implementing persistent sessions):
+# sqlalchemy>=2.0,<3.0         # database ORM
+# alembic>=1.12,<2.0           # database migrations
+
+# Installation Notes       
+# 
+# Standard library modules used (included with Python):
+# - argparse, asyncio, collections, csv, datetime, gzip, hashlib
+# - json, logging, os, pathlib, re, shutil, statistics, subprocess  
+# - sys, tarfile, tempfile, threading, time, warnings
+#
+# For TCL language support in CodeBLEU evaluation:
+# - The tree-sitter-tcl package may need to be built from source
+# - See exp_v1/codebleu_tcl/ for custom TCL language bindings
+#
+# EDA Tool Integration (not included):
+# - Synopsys Design Compiler (dc_shell)
+# - Cadence Innovus (innovus)  
+# - Valid tool licenses required for actual EDA execution
