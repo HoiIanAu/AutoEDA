@@ -5,7 +5,10 @@
 
 A production-grade, microservice-based Electronic Design Automation (EDA) platform that transforms natural language instructions into complete RTL-to-GDSII flows. Built with local fine-tuned AI models, MCP integration, and supports both commercial and open-source EDA tools.
 
-[[Paper](arxiv.org/abs/2508.01012)] [[Website](https://llm4chip.org/)][[Video](https://llm4chip.org/demo_v3.mp4)]
+[[Paper](https://arxiv.org/abs/2508.01012)] [[Website](https://llm4chip.org/)][[Video](https://llm4chip.org/demo_v3.mp4)]
+
+
+> **Note:** This repository is a copy of a private project with all proprietary source code files removed. Only documentation remain for reference.
 
 ---
 
@@ -374,8 +377,6 @@ cd src/codebleu_tcl
 python3 demo/run_demo.py  # Run interactive evaluation demo
 ```
 
-For comprehensive documentation, usage examples, and advanced features, see [CodeBLEU-TCL README](src/codebleu_tcl/README.md).
-
 ---
 
 ## Benchmark Generation Pipeline
@@ -511,7 +512,7 @@ request_duration = Histogram('request_duration_seconds', 'Request duration')
 
 ## License
 
-This project is licensed under the creative commons - see the [LICENSE](https://github.com/Duke-CEI-Center/AutoEDA/blob/main/LICENSE.md) file for details.
+This project is licensed under the creative commons - see the [LICENSE](./LICENSE.md) file for details.
 
 
 ## Acknowledgments
@@ -528,7 +529,7 @@ This project is licensed under the creative commons - see the [LICENSE](https://
 
 - **Email**: yl996@duke.edu
 - **Discussion**: [Join our discussion](https://github.com/Duke-CEI-Center/AutoEDA/discussions)
-- **Documentation**: [Quick Start Guide](https://github.com/Duke-CEI-Center/AutoEDA/blob/main/QUICK_START_GUIDE.md)
+- **Documentation**: [Quick Start Guide](./QUICK_START_GUIDE.md)
 - **Issues**: [GitHub Issues](https://github.com/Duke-CEI-Center/AutoEDA/issues)
 
 ---

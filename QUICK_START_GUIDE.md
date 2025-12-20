@@ -670,6 +670,6 @@ You can use AutoEDA server in **VS Code Copilot** or **Cursor**. For setup instr
 - **API Documentation**: Check detailed [API_DOCUMENTATION.md](API_DOCUMENTATION.md) for complete reference
 - **Service Health**: Use the health check endpoints to monitor system status
 - **Logs**: Check service logs in the `logs/` directory for detailed execution information  
-- **CodeBLEU Evaluation**: See [src/codebleu_tcl/README.md](src/codebleu_tcl/README.md) for evaluation framework details
+- **CodeBLEU Evaluation**: See [CodeBLEU_TCL_README.md](src/codebleu_tcl/README.md) for evaluation framework details
 - **GitHub Issues**: Report problems and request features
 - **Natural Language**: Use the AI agent to ask questions about the system itself
